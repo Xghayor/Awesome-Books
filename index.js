@@ -43,3 +43,11 @@ books = books.filter(book => book.title !== bookTitle);
   localStorage.setItem('books', JSON.stringify(books));
   updateBooks();
 }
+
+awesomeBooks.addEventListener('click', function(event) {
+    const bookTitle = event.target.value;
+    removeBook(bookTitle);
+});
+window.addEventListener('DOMContentLoaded', function() {
+  updateBooks();
+});
