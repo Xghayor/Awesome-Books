@@ -5,27 +5,10 @@ const awesomeBooks = document.getElementById('book');
 
 // Add books function
 
-function add() {
-  const title = document.getElementById('fTitle').value;
-  const author = document.getElementById('fAuthor').value;
-
-  if (title.trim() === '' || author.trim() === '') {
-    alert('Please enter title and author');
-    return;
-  }
-
-  books.push({ title, author });
-  localStorage.setItem('books', JSON.stringify(books));
-
-  updateBooks();
-}
-
-addBtn.addEventListener('click', add);
-
 function updateBooks() {
   awesomeBooks.innerHTML = '';
 
-  books.forEach(book => {
+  books.forEach((book) => {
     awesomeBooks.innerHTML += `
       <div>
         <h2>${book.title}</h2>
@@ -37,17 +20,33 @@ function updateBooks() {
   });
 }
 
+function add() {
+  const title = document.getElementById('fTitle').value;
+  const author = document.getElementById('fAuthor').value;
+
+  if (title.trim() === '' || author.trim() === '') {
+    return;
+  }
+
+  books.push({ title, author });
+  localStorage.setItem('books', JSON.stringify(books));
+
+  updateBooks();
+}
+
+addBtn.addEventListener('click', add);
+
 // Remove books function
 function removeBook(bookTitle) {
-books = books.filter(book => book.title !== bookTitle);
+  books = books.filter((book) => book.title !== bookTitle);
   localStorage.setItem('books', JSON.stringify(books));
   updateBooks();
 }
 
-awesomeBooks.addEventListener('click', function(event) {
-    const bookTitle = event.target.value;
-    removeBook(bookTitle);
+awesomeBooks.addEventListener('click', (event) => {
+  const bookTitle = event.target.value;
+  removeBook(bookTitle);
 });
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', () => {
   updateBooks();
 });
