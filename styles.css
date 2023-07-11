@@ -16,6 +16,8 @@ button {
   text-align: center;
   padding: 0.125em 0.5em;
   border-radius: 3px;
+  box-shadow: 1px 1px;
+  cursor: pointer;
 }
 
 ul {
