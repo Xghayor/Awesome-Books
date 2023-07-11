@@ -55,10 +55,12 @@ ul {
 }
 
 .line {
-  border-bottom: 3px ridge rgba(0, 0, 0, 0.8);
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  border-bottom-left-radius: 80%;
+  border-top-right-radius: 80%;
   width: 20%;
   margin: 0 auto;
-  padding-top: 1.5em;
+  margin-top: 1.5em;
 }
 
 .form {
