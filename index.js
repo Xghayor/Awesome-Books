@@ -28,7 +28,7 @@ class BookManager {
   remove(event) {
     if (event.target.classList.contains('remove-button')) {
       const bookTitle = event.target.value;
-      this.books = this.books.filter(book => book.title !== bookTitle);
+      this.books = this.books.filter((book) => book.title !== bookTitle);
       localStorage.setItem('books', JSON.stringify(this.books));
       this.update();
     }
@@ -37,7 +37,7 @@ class BookManager {
   update() {
     this.awesomeBooks.innerHTML = '';
 
-    this.books.forEach(book => {
+    this.books.forEach((book) => {
       this.awesomeBooks.innerHTML += `
         <div class="books">
           <p class="bookDetail">"${book.title}" by ${book.author}</p>
@@ -49,3 +49,5 @@ class BookManager {
 }
 
 const bookManager = new BookManager();
+
+bookManager.update();
