@@ -37,3 +37,9 @@ function updateBooks() {
   });
 }
 
+// Remove books function
+function removeBook(bookTitle) {
+books = books.filter(book => book.title !== bookTitle);
+  localStorage.setItem('books', JSON.stringify(books));
+  updateBooks();
+}
