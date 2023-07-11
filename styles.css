@@ -1,3 +1,91 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  color: black;
+  font-family: 'lato', sans-serif;
+  font-size: small;
+}
+
+button {
+  background: none;
+  text-align: center;
+  padding: 0.125em 0.5em;
+  border-radius: 3px;
+  box-shadow: 1px 1px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 70%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  font-size: x-large;
+  margin: 0.5em 0;
+}
+
+.books-cont, input {
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+}
+
+.books {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25em 0.5em;
+}
+
+.books:nth-of-type(odd) {
+  background: lightgray;
+}
+
+.books:nth-of-type(even) {
+  background: white;
+}
+
+.line {
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  border-bottom-left-radius: 80%;
+  border-top-right-radius: 80%;
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 1.5em;
+}
+
+.form {
+  margin: 1em 0;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.form-item {
+  text-align: center;
+  width: 50%;
+}
+
+.form-item input {
+  width: 100%;
+  padding: 0.25em 0.5em;
+}
+
+.form-item:nth-child(3) {
+  text-align: right;
 }
