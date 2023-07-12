@@ -21,7 +21,10 @@ button {
   border: 2px solid rgba(0, 0, 0, 0.5);
   box-shadow: 1.5px 1.5px;
   cursor: pointer;
+
 }
+
+
 
 ul {
   list-style: none;
