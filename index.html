@@ -11,26 +11,60 @@
 </head>
 <body>
     
-    <div class="container">
-        <h1 class="header">All awesome Books</h1>
-        <div  id="book" class="books-cont remove-button">
-        </div>
-        
-        <div class="line"></div>
+    <div class="container row">
 
-        <form action="#" class="form">
-            <h2 class="header">Add a new book</h2>
+        <header class="header row">
+            <h3>Awesome Books</h3>
+            <nav class="nav">
+                <ul class="nav-list row">
+                    <li class="nav-item"><a href="#list" class="nav-link" id="list-link">List</a></li>
+                    <li class="nav-item"><a href="#form" class="nav-link" id="form-link">Add book</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link" id="contact-link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="section-one" id="list">
+            <h1 class="header-title">All awesome Books</h1>
+            <div  id="book" class="books-cont remove-button">
+            </div>
+        </section>
+
+        <div class="line hidden"></div>
+
+        <form action="#" class="form hidden" id="form">
+            <h2 class="header-title">Add a new book</h2>
             <ul class="form-list">
                 <li class="form-item"><input type="text" placeholder="Title" id="fTitle" required></li>
                 <li class="form-item"><input type="text" placeholder="Author" id="fAuthor" required></li>
                 <li class="form-item"><button type="button" id="formBtn" class="formBtn">Add</button></li>
             </ul>
         </form>
+
+        <section class="contact hidden" id="contact">
+            <div class="row">
+                <h2 class="header-title">Contact information</h2>
+                <p class="contact-desc">
+                    Do you have any questions or you just want to say "hello"? You can reach our to us!
+                </p>
+                <ul class="contact-list">
+                    <li class="contact-item">Our email: mail.gmail.com</li>
+                    <li class="contact-item">Our phone number: +251919300400</li>
+                    <li class="contact-item">Our address: bole 22, Addis Ababa, Ethiopia</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="footer" id="footer">
+            <p>Copyright</p>
+            <p>Some rights reserved.</p>
+        </footer>
     </div>
 
 
 
 
     <script src="./index.js"></script>
+    <script src="./display.js"></script>
 </body>
 </html>
