@@ -36,7 +36,8 @@ ul {
   margin: 0.5em 0;
 }
 
-.books-cont, input {
+.books-cont,
+input {
   border: 3px solid rgba(0, 0, 0, 0.8);
   border-radius: 3px;
 }
