@@ -9,7 +9,6 @@
 body {
   font-family: 'lato', sans-serif;
   font-size: small;
-  background-image: url(./images/R\ \(1\).jpg);
   line-height: 1.5;
 }
 
@@ -21,10 +20,7 @@ button {
   border: 2px solid rgba(0, 0, 0, 0.5);
   box-shadow: 1.5px 1.5px;
   cursor: pointer;
-
 }
-
-
 
 ul {
   list-style: none;
@@ -162,4 +158,10 @@ input,
 
 .footer p:last-of-type {
   font-size: smaller;
+}
+
+.time-container {
+  position: absolute;
+  left: 800px;
+  top: 60px;
 }
