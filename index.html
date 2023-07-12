@@ -12,22 +12,19 @@
 <body>
     
     <div class="container row">
-
-        <header class="header row">
-            <a href="#"><h3>Awesome Books</h3></a>
-            <nav class="nav">
-                <ul class="nav-list row">
-                    <li class="nav-item"><a href="#list" class="nav-link" id="list-link">List</a></li>
-                    <li class="nav-item"><a href="#form" class="nav-link" id="form-link">Add book</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link" id="contact-link">Contact</a></li>
-                </ul>
-            </nav>
-            
-        </header>
-
-        <div class="time-container">
-            <p id="get-time">new time</p>
-        </div>
+        <section class="section-header">        
+            <header class="header row">
+                <a href="#"><h3>Awesome Books</h3></a>
+                <nav class="nav">
+                    <ul class="nav-list row">
+                        <li class="nav-item"><a href="#list" class="nav-link" id="list-link">List</a></li>
+                        <li class="nav-item"><a href="#form" class="nav-link" id="form-link">Add book</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link" id="contact-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="date-display"></div>
+        </section>
 
         <section class="section-one" id="list">
             <h1 class="header-title">All awesome Books</h1>
@@ -70,6 +67,6 @@
 
 
     <script src="./index.js"></script>
-    <script src="./display.js"></script>
+    <script src="./display.js" type="module"></script>
 </body>
 </html>

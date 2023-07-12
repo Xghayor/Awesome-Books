@@ -1,3 +1,5 @@
+import { DateTime } from "https://moment.github.io/luxon/es6/luxon.js";
+
 const list = document.getElementById('list');
 const addNew = document.getElementById('form');
 const contact = document.getElementById('contact');
@@ -17,6 +19,9 @@ listLink.addEventListener('click', () => {
   if (list.classList.contains('hidden')) {
     list.classList.remove('hidden');
   }
+  listLink.style.color = 'blue';
+  formLink.style.color = 'black';
+  contactLink.style.color = 'black';
 });
 
 formLink.addEventListener('click', () => {
@@ -31,6 +36,9 @@ formLink.addEventListener('click', () => {
   if (addNew.classList.contains('hidden')) {
     addNew.classList.remove('hidden');
   }
+  listLink.style.color = 'black';
+  formLink.style.color = 'blue';
+  contactLink.style.color = 'black';
 });
 
 contactLink.addEventListener('click', () => {
@@ -45,9 +53,15 @@ contactLink.addEventListener('click', () => {
   if (contact.classList.contains('hidden')) {
     contact.classList.remove('hidden');
   }
+  listLink.style.color = 'black';
+  formLink.style.color = 'black';
+  contactLink.style.color = 'blue';
 });
 
-const date = new Date();
-const currentTime = document.getElementById('get-time');
+const displayTime = document.getElementById('date-display');
 
-currentTime.innerHTML = date;
+setInterval(() => {
+  const now = DateTime.now();
+  displayTime.innerHTML = now.toFormat('LLLL dd yyyy, hh:mm:ss a');
+}, 500);
+

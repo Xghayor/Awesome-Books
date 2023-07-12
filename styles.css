@@ -36,8 +36,7 @@ a {
 }
 
 .container {
-  width: 70%;
-  max-width: 700px;
+  width: 95%;
   margin: 0 auto;
   min-height: 100vh;
   padding: 1.5em 0;
@@ -64,14 +63,26 @@ a {
 .nav-item:nth-of-type(2) {
   border-left: 2px solid rgba(0, 0, 0, 0.5);
   border-right: 2px solid rgba(0, 0, 0, 0.5);
-  margin: 0 0.25em;
-  padding: 0 0.25em;
+  margin: 0 0.5em;
+  padding: 0 0.5em;
+}
+
+.section-one,
+.form,
+.contact {
+  flex: 1;
 }
 
 .header-title {
   text-align: center;
   font-size: x-large;
   margin-bottom: 0.5em;
+}
+
+#date-display {
+  padding: 10px 0;
+  width: 100%;
+  text-align: right;
 }
 
 .books-cont,
@@ -107,15 +118,16 @@ input,
   margin-top: 1.5em;
 }
 
-.form {
-  margin: 1em 0;
+.form-list,
+.contact-desc {
+  padding-top: 2em;
 }
 
 .form-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5em;
+  gap: 1em;
 }
 
 .form-item {
@@ -139,6 +151,7 @@ input,
 .contact {
   font-size: larger;
   margin: 0 auto;
+  padding: 0 3em;
 }
 
 .contact-list {
@@ -158,10 +171,4 @@ input,
 
 .footer p:last-of-type {
   font-size: smaller;
-}
-
-.time-container {
-  position: absolute;
-  left: 800px;
-  top: 60px;
 }
